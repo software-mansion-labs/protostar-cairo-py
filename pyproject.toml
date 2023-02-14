@@ -6,11 +6,17 @@ packages = [{include = "protostar_cairo_py"}]
 readme = "README.md"
 version = "0.1.0"
 
+[tool.poe.tasks]
+build = [
+  "cd protostar-cairo/crates/cairo-lang-python-bindings && maturin build",
+]
+
 [tool.poetry.dependencies]
 python = ">=3.9.14, <3.10"
 
 [tool.poetry.group.dev.dependencies]
 maturin = "^0.14.13"
+poethepoet = "^0.18.1"
 
 [build-system]
 build-backend = "poetry.core.masonry.api"
