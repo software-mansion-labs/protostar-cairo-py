@@ -1,7 +1,7 @@
 [tool.poetry]
 authors = []
 description = ""
-name = "protostar-cairo-py"
+name = "protostar_cairo_py"
 packages = [{include = "protostar_cairo_py"}]
 readme = "README.md"
 version = "0.1.0"
