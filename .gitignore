@@ -1,5 +1,7 @@
+.DS_Store
 .venv/
 .vscode/
 .envrc
 wheels/
 dist/
+cairo_python_bindings/
