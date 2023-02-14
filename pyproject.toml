@@ -1,0 +1,14 @@
+[tool.poetry]
+authors = []
+description = ""
+name = "protostar-cairo-py"
+packages = [{include = "protostar_cairo_py"}]
+readme = "README.md"
+version = "0.1.0"
+
+[tool.poetry.dependencies]
+python = ">=3.9.14, <3.10"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]
