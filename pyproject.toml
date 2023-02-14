@@ -6,10 +6,8 @@ packages = [{include = "protostar_cairo_py"}]
 readme = "README.md"
 version = "0.1.0"
 
-[tool.poe.tasks]
-build = [
-  "cd protostar-cairo/crates/cairo-lang-python-bindings && maturin build",
-]
+[tool.poe.tasks.build]
+shell = "cd protostar-cairo/crates/cairo-lang-python-bindings && rustup override set nightly && maturin build --release --strip --out ../../../wheels"
 
 [tool.poetry.dependencies]
 python = ">=3.9.14, <3.10"
