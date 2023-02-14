@@ -9,6 +9,9 @@ version = "0.1.0"
 [tool.poetry.dependencies]
 python = ">=3.9.14, <3.10"
 
+[tool.poetry.group.dev.dependencies]
+maturin = "^0.14.13"
+
 [build-system]
 build-backend = "poetry.core.masonry.api"
 requires = ["poetry-core"]
