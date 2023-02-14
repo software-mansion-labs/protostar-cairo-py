@@ -15,6 +15,7 @@ python = ">=3.9.14, <3.10"
 [tool.poetry.group.dev.dependencies]
 maturin = "^0.14.13"
 poethepoet = "^0.18.1"
+twine = "^4.0.2"
 
 [build-system]
 build-backend = "poetry.core.masonry.api"
