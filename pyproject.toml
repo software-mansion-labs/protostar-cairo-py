@@ -14,3 +14,11 @@ python = ">=3.9.14, <3.10"
 [tool.poetry.group.dev.dependencies]
 maturin = "^0.14.13"
 poethepoet = "^0.18.1"
+
+[build-system]
+build-backend = "maturin"
+requires = ["maturin>=0.14,<0.15"]
+
+[tool.maturin]
+include = ["cairo_python_bindings/**/*"]
+manifest-path = "protostar_cairo/Cargo.toml"
