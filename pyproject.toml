@@ -23,13 +23,14 @@ python = ">=3.9.14, <3.10"
 [tool.poetry.group.dev.dependencies]
 maturin = "^0.14.13"
 poethepoet = "^0.18.1"
+gitpython = "^3.1.30"
 
 [build-system]
 build-backend = "maturin"
 requires = ["maturin>=0.14,<0.15"]
 
 [tool.maturin]
-exclude = ["build"]
+exclude = ["build", "scripts"]
 manifest-path = "rust/crates/cairo-lang-python-bindings/Cargo.toml"
 profile = "release"
 strip = true
