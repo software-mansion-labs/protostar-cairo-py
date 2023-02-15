@@ -2,6 +2,6 @@
 .venv/
 .vscode/
 .envrc
-wheels/
+build/
 dist/
 cairo_python_bindings/

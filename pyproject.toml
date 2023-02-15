@@ -6,7 +6,7 @@ readme = "README.md"
 version = "0.1.0"
 
 [tool.poe.tasks.build]
-shell = "cd protostar_cairo/crates/cairo-lang-python-bindings && rustup override set nightly && maturin build --release --strip --out ../../../cairo_python_bindings"
+shell = "rustup override set nightly && maturin build --out ./build"
 
 [tool.poetry.dependencies]
 python = ">=3.9.14, <3.10"
@@ -20,5 +20,7 @@ build-backend = "maturin"
 requires = ["maturin>=0.14,<0.15"]
 
 [tool.maturin]
-include = ["cairo_python_bindings/**/*"]
-manifest-path = "protostar_cairo/Cargo.toml"
+exclude = ["build"]
+manifest-path = "rust/crates/cairo-lang-python-bindings/Cargo.toml"
+profile = "release"
+strip = true
