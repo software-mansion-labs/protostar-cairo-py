@@ -3,7 +3,7 @@ authors = []
 description = "Protostar Cairo bindings for Python"
 name = "protostar_cairo_py"
 readme = "README.md"
-version = "0.0.0"
+version = "0.0.1"
 
 [tool.poe.tasks.build]
 shell = "rustup override set nightly && maturin build --out ./build"
