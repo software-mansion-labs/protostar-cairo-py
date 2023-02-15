@@ -14,8 +14,8 @@ version = "0.0.0"
 [tool.poe.tasks.build]
 shell = "rustup override set nightly && maturin build --out ./build"
 
-# [tool.poe.tasks.publish]
-# shell = "rustup override set nightly && maturin publish --no-sdist --out ./build -u swm-kasperski95"
+[tool.poe.tasks.sync]
+shell = "git submodule update --remote --merge"
 
 [tool.poetry.dependencies]
 python = ">=3.9.14, <3.10"
