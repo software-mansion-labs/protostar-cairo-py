@@ -23,7 +23,7 @@ SOFTWARE-MANSION-LABS/CAIRO (fork)
 1. Install a Python version management tool such as [pyenv](https://github.com/pyenv/pyenv) or [asdf](https://github.com/asdf-vm/asdf).
 1. Install Python 3.9.14.
 1. Clone this repository.
-1. Verify that the active Python version is python 3.9.14.
+1. Verify that the active Python version is 3.9.14.
 1. Create a virtual environment: `python -m venv .venv`.
 1. Activate the environment: `source .venv/bin/activate`.
 1. Upgrade pip: `pip install --upgrade pip`.
