@@ -17,13 +17,16 @@ shell = "rustup override set nightly && maturin build --out ./build"
 [tool.poe.tasks.sync]
 shell = "git submodule update --remote --merge"
 
+[tool.poe.tasks.deploy]
+shell = "python scripts/deploy.py"
+
 [tool.poetry.dependencies]
 python = ">=3.9.14, <3.10"
 
 [tool.poetry.group.dev.dependencies]
+gitpython = "^3.1.30"
 maturin = "^0.14.13"
 poethepoet = "^0.18.1"
-gitpython = "^3.1.30"
 tomli = "^2.0.1"
 tomli-w = "^1.0.0"
 
