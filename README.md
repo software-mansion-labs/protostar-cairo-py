@@ -1,4 +1,5 @@
 # protostar_cairo_py
+[![pypi](https://img.shields.io/pypi/v/protostar-cairo-py)](https://pypi.org/project/protostar-cairo-py/)
 
 This is an internal package used by [Protostar](https://github.com/software-mansion/protostar).
 
