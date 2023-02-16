@@ -24,6 +24,8 @@ python = ">=3.9.14, <3.10"
 maturin = "^0.14.13"
 poethepoet = "^0.18.1"
 gitpython = "^3.1.30"
+tomli = "^2.0.1"
+tomli-w = "^1.0.0"
 
 [build-system]
 build-backend = "maturin"
