@@ -2,7 +2,7 @@
 description = "Protostar Cairo bindings for Python"
 name = "protostar_cairo_py"
 readme = "README.md"
-version = "0.0.2"
+version = "0.0.3"
 
 [tool.poetry]
 authors = []
