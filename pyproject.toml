@@ -2,7 +2,7 @@
 description = "Protostar Cairo bindings for Python"
 name = "protostar_cairo_py"
 readme = "README.md"
-version = "0.0.1"
+version = "0.0.2"
 
 [tool.poetry]
 authors = []
@@ -30,8 +30,8 @@ shell = "rustup override set nightly && maturin build --out ./build"
 
 [tool.maturin]
 exclude = [
-  "build",
-  "scripts",
+    "build",
+    "scripts",
 ]
 manifest-path = "rust/crates/cairo-lang-python-bindings/Cargo.toml"
 profile = "release"
@@ -40,5 +40,5 @@ strip = true
 [build-system]
 build-backend = "maturin"
 requires = [
-  "maturin>=0.14,<0.15",
+    "maturin>=0.14,<0.15",
 ]
