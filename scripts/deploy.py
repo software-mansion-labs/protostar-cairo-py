@@ -12,15 +12,16 @@ from packaging import version
 PROJECT_ROOT = Path(__file__).parent.parent
 repo = Repo(PROJECT_ROOT)
 
+print("Is the `rust` submodule releasable?")
+
 if str(repo.active_branch) != "master":
     print("Checkout to master and try again.")
     sys.exit(1)
 
 # check if the local master is in sync with the remote master
 commits_behind_count = sum(1 for c in repo.iter_commits("master..origin/master"))
-commits_ahead_count = sum(1 for c in repo.iter_commits("origin/master..master"))
-if commits_ahead_count + commits_behind_count > 0:
-    print("`master` is not in sync with the `origin/master`")
+if commits_behind_count > 0:
+    print("`master` is behind `origin/master`")
     sys.exit(1)
 
 # get current version
