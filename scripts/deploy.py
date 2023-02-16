@@ -55,19 +55,19 @@ with open(path, "r+", encoding="UTF-8") as file:
     file.write(tomli_w.dumps(pyproject))
 
 
-# # add commit
-# assert new_version_str is not None
-# repo.git.add("pyproject.toml")
-# commit = repo.index.commit(f"release {new_version_str}")
+# add commit
+assert new_version_str is not None
+repo.git.add("pyproject.toml")
+commit = repo.index.commit(f"release {new_version_str}")
 
-# # add tag
-# tag_name = f"v{new_version_str}"
-# tag = repo.create_tag(tag_name, ref=commit.hexsha)
+# add tag
+tag_name = f"v{new_version_str}"
+tag = repo.create_tag(tag_name, ref=commit.hexsha)
 
-# # push to master
-# origin = repo.remote(name="origin")
-# origin.push()
-# origin.push(tag.path)
+# push to master
+origin = repo.remote(name="origin")
+origin.push()
+origin.push(tag.path)
 
-# print(f"Created and pushed tag: {tag_name}")
-# print("It may take some time until GitHub action builds and uploads binaries.")
+print(f"Created and pushed tag: {tag_name}")
+print("It may take some time until GitHub action builds and uploads binaries.")

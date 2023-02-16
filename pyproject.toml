@@ -11,15 +11,6 @@ name = ""
 readme = ""
 version = "0.0.0"
 
-[tool.poe.tasks.build]
-shell = "rustup override set nightly && maturin build --out ./build"
-
-[tool.poe.tasks.sync]
-shell = "git submodule update --remote --merge"
-
-[tool.poe.tasks.deploy]
-shell = "python scripts/deploy.py"
-
 [tool.poetry.dependencies]
 python = ">=3.9.14, <3.10"
 
@@ -30,12 +21,24 @@ poethepoet = "^0.18.1"
 tomli = "^2.0.1"
 tomli-w = "^1.0.0"
 
-[build-system]
-build-backend = "maturin"
-requires = ["maturin>=0.14,<0.15"]
+[tool.poe.tasks]
+deploy = "python ./scripts/deploy.py"
+sync = "git submodule update --remote --merge"
+
+[tool.poe.tasks.build]
+shell = "rustup override set nightly && maturin build --out ./build"
 
 [tool.maturin]
-exclude = ["build", "scripts"]
+exclude = [
+  "build",
+  "scripts",
+]
 manifest-path = "rust/crates/cairo-lang-python-bindings/Cargo.toml"
 profile = "release"
 strip = true
+
+[build-system]
+build-backend = "maturin"
+requires = [
+  "maturin>=0.14,<0.15",
+]
